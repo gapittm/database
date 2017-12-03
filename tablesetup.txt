@@ -1,0 +1,78 @@
+drop table if exists DesiredMajors;
+drop table if exists Representatives;
+drop table if exists HiringLocations;
+drop table if exists CompanyEmails;
+drop table if exists CompanyWebsites;
+
+create table CompanyWebsites (
+  c_name varchar(255) not null,
+  c_website varchar(255) not null,
+  primary_key(c_name)
+);
+
+create table CompanyEmails (
+  c_name varchar(255) not null,
+  c_email varchar(255) not null,
+  foreign key(c_name) references CompanyWebsites(c_name)
+);
+
+create table HiringLocations (
+  c_name varchar(255) not null,
+  l_address varchar(255) not null,
+  l_phone varchar(13) not null unique,
+  l_nintern int not null,
+  l_nfulltime int not null,
+  primary key (l_address),
+  foreign key (c_name) references CompanyWebsites(c_name)
+);
+
+create table Representatives (
+  c_name varchar(255) not null,
+  r_id varchar(255) not null,
+  r_fname varchar(100) not null,
+  r_lname varchar(100) not null,
+  r_email varchar(100) not null,
+  r_phone varchar(13) not null,
+  primary key (r_id),
+  foreign key (c_name) references CompanyWebsites(c_name)
+);
+
+create table DesiredMajors (
+  c_name varchar(255) not null,
+  d_major varchar(50) not null,
+  foreign key (c_name) references CompanyWebsites(c_name)
+);
+
+drop table if exists StudentEmails;
+drop table if exists StudentPhones
+drop table if exists StudentNames;
+
+create table StudentNames (
+  s_id varchar(255) not null,
+  s_fname varchar(100) not null,
+  s_lname varchar(100) not null,
+  s_major varchar(50) not null,
+  primary key (s_id)
+);
+
+create table StudentEmails (
+  s_id varchar(255) not null,
+  s_email varchar(100) not null,
+  foreign key (s_id) references StudentNames(s_id)
+);
+
+create table StudentPhones (
+  s_id varchar(255) not null,
+  s_phone varchar(100) not null,
+  foreign key (s_id) references StudentNames(s_id)
+);
+
+drop table if exists UserTypes;
+
+create table UserTypes (
+  u_id varchar(255) not null,
+  u_type char(1) not null,
+  u_password varchar(100) not null,
+  primary key(u_id)
+);
+

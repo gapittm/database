@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    background-color: #404040;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  a, p {
+    color: white;
+    text-decoration: none;
+  }
+
+  div.header {
+    background-color: #f66733;
+    margin: -10px;
+    padding: 25px;
+    height: 100px;
+  }
+
+  div.loginbody {
+    margin: auto;
+    margin-top: 100px;
+    width: 420px;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <img style="max-width: 420px;" src="clemsonwordmark.png">
+  </div>
+  <div class="loginbody">
+    <h3 style="color: white;">Virtual Career Fair Login</h3>
+    <form action="login.php" method="post">
+      <input type="text" placeholder="Student or Representative Id" name="id" required><br><br>
+      <input type="password" placeholder="Password" name="password" required><br><br>
+      <input type="submit" value="Login"><br><br>
+    </form>
+    <a href="regstd.html">Register as a student</a><br>
+    <a href="regrep.html">Register as a representative</a><br>
+    <a href="regcom.html">Register a new company</a><br><br><br>
+  </div>
+</body>
+</html>

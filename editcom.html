@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    background-color: #404040;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  div.header {
+    background-color: #f66733;
+    margin: -10px;
+    padding: 25px;
+    height: 100px;
+  }
+
+  div.regbody {
+    margin: auto;
+    margin-top: 100px;
+    width: 420px;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <img style="max-width: 420px;" src="clemsonwordmark.png">
+  </div>
+  <div class="regbody">
+    <h3 style="color: white;">Edit Company Information</h3>
+    <form action="editcom.php" method="post">
+      <h5 style="color: white;">Current Company Name</h5>
+      <input type="text" placeholder="Current Company Name" name="oldcompanyname" required><br>
+      <h5 style="color: white;">New Company Information</h5>
+      <input type="text" placeholder="Company Name" name="companyname" required><br><br>
+      <input type="url" placeholder="Company Website" name="companywebsite" required><br><br>
+      <input type="email" placeholder="Company Email" name="companyemail" required><br><br>
+      <input type="submit" value="Update Information"><br><br>
+    </form>
+
+    <h3 style="color: white;">Desired Majors</h3>
+    <h5 style="color: white;">Add New Major</h5>
+    <form action="editcom.php" method="post">
+      <input type="text" placeholder="Current Company Name" name="oldcompanyname" required><br><br>
+      <input type="text" placeholder="New Major" name="newmajor" required><br><br>
+      <input type="submit" value="Add Major"><br>
+    </form>
+    <h5 style="color: white;">Remove Old Major</h5>
+    <form action="editcom.php" method="post">
+      <input type="text" placeholder="Current Company Name" name="oldcompanyname" required><br><br>
+      <input type="text" placeholder="Old Major" name="oldmajor" required><br><br>
+      <input type="submit" value="Remove Major"><br><br>
+    </form>
+
+    <h3 style="color: white;">Hiring Locations</h3>
+    <h5 style="color: white;">Add New Hiring Location</h5>
+    <form action="editcom.php" method="post">
+      <input type="text" placeholder="Current Company Name" name="oldcompanyname" required><br><br>
+      <input type="text" placeholder="Location Address" name="newlocationaddress" required><br><br>
+      <input type="tel" placeholder="Location Phone" name="locationphone" required><br><br>
+      <input type="number" placeholder="Number of Internships" name="locationintern" required><br><br>
+      <input type="number" placeholder="Number of Full Time Positions" name="locationfulltime" required><br><br>
+      <input type="submit" value="Add Location"><br>
+    </form>
+    <h5 style="color: white;">Remove Old Hiring Location</h5>
+    <form action="editcom.php" method="post">
+      <input type="text" placeholder="Location Address" name="oldlocationaddress" required><br><br>
+      <input type="submit" value="Remove Location"><br><br>
+    </form>
+
+    <h3 style="color: white;">Update Hiring Location</h3>
+    <form action="editcom.php" method="post">
+      <h5 style="color: white;">Current Address</h5>
+      <input type="text" placeholder="Location Address" name="curlocationaddress" required><br>
+      <h5 style="color: white;">New Information</h5>
+      <input type="tel" placeholder="Location Phone" name="locationphone" required><br><br>
+      <input type="number" placeholder="Number of Internships" name="locationintern" required><br><br>
+      <input type="number" placeholder="Number of Full Time Positions" name="locationfulltime" required><br><br>
+      <input type="submit" value="Update Information"><br><br>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    background-color: #404040;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  div.header {
+    background-color: #f66733;
+    margin: -10px;
+    padding: 25px;
+    height: 100px;
+  }
+
+  div.editbody {
+    margin: auto;
+    margin-top: 100px;
+    width: 420px;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <img style="max-width: 420px;" src="clemsonwordmark.png">
+  </div>
+  <div class="editbody">
+    <h3 style="color: white;">Edit Personal Information</h3>
+    <form action="editrep.php" method="post">
+      <h5 style="color: white;">Enter Current Credentials</h5>
+      <input type="text" placeholder="Representative Id" name="id" required><br><br>
+      <input type="password" placeholder="Password" name="password" required><br><br>
+      <h5 style="color: white;">Enter New Information</h5>
+      <input type="text" placeholder="New First Name" name="firstname" required><br><br>
+      <input type="text" placeholder="New Last Name" name="lastname" required><br><br>
+      <input type="email" placeholder="New Email" name="email" required><br><br>
+      <input type="tel" placeholder="New Phone" name="phone" required><br><br>
+      <input type="submit" value="Update Information"><br><br>
+    </form>
+  </div>
+</body>
+</html>

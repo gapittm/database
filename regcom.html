@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    background-color: #404040;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  div.header {
+    background-color: #f66733;
+    margin: -10px;
+    padding: 25px;
+    height: 100px;
+  }
+
+  div.regbody {
+    margin: auto;
+    margin-top: 100px;
+    width: 420px;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <img style="max-width: 420px;" src="clemsonwordmark.png">
+  </div>
+  <div class="regbody">
+    <h3 style="color: white;">New Company Registration</h3>
+    <form action="regcom.php" method="post">
+      <h5 style="color: white;">General Company Information</h5>
+      <input type="text" placeholder="Company Name" name="companyname" required><br><br>
+      <input type="url" placeholder="Company Website" name="companywebsite" required><br><br>
+      <input type="email" placeholder="Company Email" name="companyemail" required><br><br>
+      <input type="text" placeholder="Majors (major1,major2,major3)" name="majors" required><br><br>
+      <h5 style="color: white;">Initial Representative Information</h5>
+      <input type="text" placeholder="Representative Id" name="id" required><br><br>
+      <input type="password" placeholder="New Password" name="password" required><br><br>
+      <input type="password" placeholder="Confirm Password" name="passcheck" required><br><br>
+      <input type="text" placeholder="First Name" name="firstname" required><br><br>
+      <input type="text" placeholder="Last Name" name="lastname" required><br><br>
+      <input type="email" placeholder="Email" name="email" required><br><br>
+      <input type="tel" placeholder="Phone" name="phone" required><br><br>
+      <h5 style="color: white;">Initial Hiring Location</h5>
+      <input type="text" placeholder="Location Address" name="locationaddress" required><br><br>
+      <input type="tel" placeholder="Location Phone" name="locationphone" required><br><br>
+      <input type="number" placeholder="Number of Internships" name="locationintern" required><br><br>
+      <input type="number" placeholder="Number of Full Time Positions" name="locationfulltime" required><br><br>
+      <input type="submit" value="Register"><br><br>
+    </form>
+  </div>
+</body>
+</html>
